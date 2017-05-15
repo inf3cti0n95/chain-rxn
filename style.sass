@@ -1,0 +1,41 @@
+body
+    background: black
+.grid
+    width: 462px 
+    margin: 0 auto
+    background: black
+    overflow: hidden
+    position: relative
+    border: 1px solid white
+.clearfix
+    clear: both
+
+.ball
+    height: 28px
+    width: 28px
+    margin: 0 2px
+    border-radius: 50%
+    display: inline-block
+    box-shadow: inset 5px 5px 5px transparentize(black, 0.4)
+.box
+    height: 65px
+    width: 65px
+    border: 1px solid white
+    display: inline-block
+    float: left
+    padding: 5px 5px
+    .innerBox
+        animation: rotate 2s linear infinite
+        display: flex
+        height: 100%
+        width: 100%
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+        text-align: center
+
+@keyframes rotate
+    from
+        transform: rotate(0deg)
+    to
+        transform: rotate(360deg)
