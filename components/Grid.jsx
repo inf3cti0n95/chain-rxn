@@ -7,7 +7,7 @@ class Grid extends Component {
     constructor(props){
         super(props);
         this.state = {boxes:[]}
-        let websocket =  new WebSocket("ws://localhost:8000")
+        let websocket =  new WebSocket("ws://ec2-35-154-121-41.ap-south-1.compute.amazonaws.com:8000/")
         websocket.addEventListener("open",()=>{
             websocket.addEventListener("message",(message)=>{
                 if(JSON.parse(message.data).userColor !== undefined)
